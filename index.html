@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Acctiviton | Your Inspire IT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    
+<style>
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Encode Sans Condensed', sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+}
+
+.header{
+ height: 350px;
+ width: 100%;
+ background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://i.postimg.cc/vBwWdFKr/Banner-yi.jpg);
+ background-position: center;
+ position : relative;
+}
+
+
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-item: center;
+}
+
+nav img{
+  width: 140px;
+}
+
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-links ul li::after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #00ff03;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+
+.nav-links ul li:hover::after{
+  width: 100%;
+}
+
+
+
+.text-box{
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.text-box h1{
+  font-size: 40px;
+  font-family: 'REM', sans-serif;
+  padding-bottom: 40px;
+}
+
+.text-box p{
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+}
+
+
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn:hover{
+  border: 1px solid #00ffff;
+  background: #00ffff;
+  color: black;
+  transition: 1s;
+}
+
+
+
+
+
+
+
+
+.warning-message {
+    background-color: #ffc107;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 350px;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Ensure the message is on top of everything */
+    animation: slideInDown 1s ease-out forwards;
+}
+
+.warning-message h2 b{
+    color: red;
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+.bl {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 150px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.balance {
+    font-size: 30px;
+    color: #333;
+    text-align: center;
+}
+
+.amount {
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0ff, 0 0 70px #0ff, 0 0 80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0ff, 0 0 35px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 75px #0ff;
+    }
+}
+
+
+.wr{
+    padding: 20;
+    background-color: #00ff03;
+    color: black;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+
+.wr h1{
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
+
+
+.goback-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-left: 30px;
+}
+
+.goback-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.icon {
+    margin-right: 5px;
+    transition: transform 0.3s; /* Add transition to icon */
+}
+
+.goback-btn:hover .icon {
+    transform: rotate(180deg); /* Rotate the icon on hover */
+}
+
+
+.fr {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+footer {
+    background-color: #001427;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.left, .right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.left {
+    margin-right: 100px;
+    margin-bottom: 20px; /* Move image downwards */
+}
+
+.right {
+    padding-left: 190px;
+    border-left: 2px solid #00ffc0; /* Blue line between image and links */
+}
+
+footer img {
+    width: 220px; /* Increase image size */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Center image and add top and bottom margin */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal; /* Set initial font weight */ 
+    transition: font-weight 0.3s; 
+    font-size: 25px;
+}
+
+/* Animated Hover Effect */
+footer a:hover {
+    animation: linkHover 0.5s ease-in-out forwards;
+    color: #00ff96;
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
+    font-width: bold;
+}
+
+@keyframes linkHover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Neon Glow Effect */
+@keyframes neon {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0ff, 0 0 70px #0ff, 0 0 80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0ff, 0 0 35px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 75px #0ff;
+    }
+}
+
+footer p {
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 710px){
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Encode Sans Condensed', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+}
+
+/* Header styles */
+.header {
+    height: 250px; /* Adjusted height for better mobile view */
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://i.postimg.cc/vBwWdFKr/Banner-yi.jpg);
+    background-position: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 100px; /* Adjusted logo size for better mobile view */
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #00ff03;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 24px; /* Adjusted font size for better mobile view */
+    padding-bottom: 20px; /* Adjusted padding for better mobile view */
+}
+
+.text-box p {
+    margin: 10px 0 20px; /* Adjusted margin for better mobile view */
+    font-size: 12px; /* Adjusted font size for better mobile view */
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 20px; /* Adjusted padding for better mobile view */
+    font-size: 12px; /* Adjusted font size for better mobile view */
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid #00ffff;
+    background: #00ffff;
+    color: black;
+    transition: 1s;
+}
+
+/* Warning message styles */
+.warning-message {
+    background-color: #ffc107;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 250px; /* Adjusted top position for better mobile view */
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Ensure the message is on top of everything */
+    animation: slideInDown 1s ease-out forwards;
+}
+
+.warning-message h2 b {
+    color: red;
+}
+
+/* Balance styles */
+.bl {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 100px; /* Adjusted margin-top for better mobile view */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.balance {
+    font-size: 24px; /* Adjusted font size for better mobile view */
+    color: #333;
+    text-align: center;
+}
+
+.amount {
+    animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+/* Withdrawal minimum styles */
+.wr {
+    padding: 20px;
+    background-color: #00ff03;
+    color: black;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 80%; /* Adjusted width for better mobile view */
+    text-align: center;
+}
+
+.wr h1 {
+    text-align: center;
+    font-size: 18px; /* Adjusted font size for better mobile view */
+    padding: 20px; /* Adjusted padding for better mobile view */
+}
+
+/* Go back button styles */
+.goback-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-left: 30px;
+}
+
+.goback-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+.icon {
+    margin-right: 5px;
+    transition: transform 0.3s; /* Add transition to icon */
+}
+
+.goback-btn:hover .icon {
+    transform: rotate(180deg); /* Rotate the icon on hover */
+}
+
+/* Footer styles */
+footer {
+    background-color: #001427;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.left, .right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.left {
+    margin-right: 20px; /* Adjusted margin-right for better mobile view */
+    margin-bottom: 20px; /* Move image downwards */
+}
+
+.right {
+    padding-left: 20px; /* Adjusted padding-left for better mobile view */
+    border-left: 2px solid #00ffc0; /* Blue line between image and links */
+}
+
+footer img {
+    max-width: 100%; /* Ensure image resizes properly on mobile */
+    height: auto;
+    display: block;
+    margin: 10px auto; /* Center image and add top and bottom margin */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal; /* Set initial font weight */ 
+    transition: font-weight 0.3s; 
+    font-size: 16px; /* Adjusted font size for better mobile view */
+}
+
+/* Animated Hover Effect */
+footer a:hover {
+    animation: linkHover 0.5s ease-in-out forwards;
+    color: #00ff96;
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
+}
+
+@keyframes linkHover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Neon Glow Effect */
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0ff, 0 0 70px #0ff, 0 0 80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0ff, 0 0 35px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 75px #0ff;
+    }
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+    <section class="header">
+		<nav>
+			<a href="https://yourtopupcenter.github.io/home"><img src="https://i.postimg.cc/nVvDBPP5/Yi-logo.png"></a>
+			  <div class="nav-links">
+			    <ul>
+			      <li><a href="https://yourtopupcenter.github.io/home">Withdraw</a></li>
+			      <li><a href="https://yourtopupcenter.github.io/Products">FAQ</a></li>
+			      <li><a href="https://yourtopupcenter.github.io/Offers">Running Team</a></li>
+			      <li><a href="https://yourtopupcenter.github.io/Blogs">Group Joining</a></li>
+			      
+			    </ul>
+			     
+			  </div>
+			  
+			 
+			 </div>
+			 
+			 
+			 
+			 
+			 <div class="text-box">
+	<h1>Withdraw</h1>
+
+	
+	
+	
+
+</div>
+ </section>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <section class="wd">
+ 
+ <div class="warning-message">
+        <h2><i class="fas fa-exclamation-triangle" style="color: #ff0a00;"></i>
+
+
+<b>Warning : </b>You cannot withdraw ! </h2>
+    </div>
+    
+    
+    
+    
+    <div class="bl">
+
+    <div class="container">
+        <h2 class="balance"><i class="fa-solid fa-circle-info" style="color: white;"></i>
+
+Your Account Balance : <span class="amount">00৳</span></h2>
+    </div>
+    </div><br><br>
+    
+    <div class="wr">
+        <h1> Minimum Withdraw : <b>150৳</b></h1>
+    </div>
+ 
+ 
+ 
+ 
+ 
+ </section><br><br>
+ 
+ 
+    <a href="#" class="goback-btn">
+        <span class="icon"><i class="fas fa-arrow-left"></i>
+</span> <!-- Unicode arrow icon -->
+        Go Back
+    </a>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <br><br><br><br><br>
+ 
+ 
+ 
+    <section="fr">
+    
+    
+    <footer>
+        <div class="left">
+            <a href="https://yourtopupcenter.github.io/home">
+                <img src="https://i.postimg.cc/nVvDBPP5/Yi-logo.png">
+            </a>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="#">YI Main</a></li>
+                <li><a href="#">Withdraw</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Account Active</a></li>
+                <li><a href="#">Running Team</a></li>
+                <li><a href="#">Join Team</a></li>
+            </ul>
+        </div>
+        <p>© All Rights Reserved to Your Inspire IT 2022-2024</p>
+    </footer></section>
+</body>
+</html>
