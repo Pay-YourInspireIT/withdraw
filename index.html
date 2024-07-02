@@ -428,6 +428,40 @@ height: auto;
 
 
 
+
+
+.alert {
+      padding: 20px;
+      background-color: #ff1f00;
+      color: white;
+      font-size: 20px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      width: calc(100% - 40px);
+      max-width: 500px;
+      box-shadow: 0 0 20px #ff1f00 , 0 0 40px #ff1f00  ;
+      text-align: center;
+    }
+
+    .closebtn {
+      margin-left: 15px;
+      color: white;      
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .closebtn:hover {
+      color: black;
+    }
 </style>
 </head>
 <body>
@@ -510,6 +544,12 @@ Your Account Balance : <span class="amount">00 ৳</span></h2>
  
  
  
+ <div id="alert" class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+     <b>Warning ! </b><br><br>
+     দুঃখীত, আপনি টাকা উইথড্র করতে পারবেন না ।  আপনার নতুন একাউন্ট,  তাই আগে আপনি আপনার একাউন্ট এক্টিভ করার পর, কাজ করে যে টাকা ইনকাম করবেন, তা এখান থেকে উইথড্র দিতে পারবেন  ।  মিনিমাম উইথড্র ১০০ টাকা । <br><br>!! Login Must Be Confirmed !! 
+  </div>
+ 
  
  
  
@@ -520,5 +560,12 @@ Your Account Balance : <span class="amount">00 ৳</span></h2>
  
  
     <div id="footer"></div>
+    
+    <script>
+           window.onload = function() {
+      document.getElementById('alert').style.display = 'block';
+    };
+       
+    </script>
 </body>
 </html>
