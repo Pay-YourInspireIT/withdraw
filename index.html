@@ -5,119 +5,13 @@
     <title>Withdraw | Your Inspire IT</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lexend+Deca:wght@100..900&family=Playwrite+IT+Moderna:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Voces&display=swap" rel="stylesheet"> 
+
+<link rel="stylesheet" href="https://userinfomaster.000webhostapp.com/host/style.css ">
+    <script src="https://userinfomaster.000webhostapp.com/host/index.js " defer></script>
 <style>
-
-*{
-  margin: 0;
-  padding: 0;
-  font-family: 'Encode Sans Condensed', sans-serif;
-  box-sizing: border-box;
-}
-
-body{
-    margin: 0 auto;
-}
-
-.header{
- height: 350px;
- width: 100%;
- background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://i.postimg.cc/vBwWdFKr/Banner-yi.jpg);
- background-position: center;
- position : relative;
-}
-
-
-nav{
-  display: flex;
-  padding: 2% 6%;
-  justify-content: space-between;
-  align-item: center;
-}
-
-nav img{
-  width: 140px;
-}
-
-.nav-links{
-  flex: 1;
-  text-align: right;
-}
-
-.nav-links ul li{
-  list-style: none;
-  display: inline-block;
-  padding: 8px 12px;
-  position: relative;
-}
-
-.nav-links ul li a{
-  color: #fff;
-  text-decoration: none;
-  font-size: 13px;
-}
-
-.nav-links ul li::after{
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #00ff03;
-  display: block;
-  margin: auto;
-  transition: 0.5s;
-}
-
-
-.nav-links ul li:hover::after{
-  width: 100%;
-}
-
-
-
-.text-box{
-  width: 90%;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-}
-
-.text-box h1{
-  font-size: 40px;
-  font-family: 'REM', sans-serif;
-  padding-bottom: 40px;
-}
-
-.text-box p{
-  margin: 10px 0 40px;
-  font-size: 14px;
-  color: #fff;
-  font-family: 'Kanit', sans-serif;
-}
-
-
-.hero-btn{
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 12px 34px;
-  font-size: 13px;
-  background: transparent;
-  position: relative;
-  cursor: pointer;
-}
-
-.hero-btn:hover{
-  border: 1px solid #00ffff;
-  background: #00ffff;
-  color: black;
-  transition: 1s;
-}
-
-
 
 
 
@@ -135,6 +29,7 @@ nav img{
     width: 100%;
     z-index: 9999; /* Ensure the message is on top of everything */
     animation: slideInDown 1s ease-out forwards;
+    margin-top: 100px;
 }
 
 .warning-message h2 b{
@@ -230,64 +125,8 @@ nav img{
 }
 
 
-.fr {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
 
-footer {
-    background-color: #001427;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
 
-.left, .right {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.left {
-    margin-right: 100px;
-    margin-bottom: 20px; /* Move image downwards */
-}
-
-.right {
-    padding-left: 190px;
-    border-left: 2px solid #00ffc0; /* Blue line between image and links */
-}
-
-footer img {
-    width: 220px; /* Increase image size */
-    height: auto;
-    display: block;
-    margin: 10px auto; /* Center image and add top and bottom margin */
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer ul li {
-    margin-bottom: 10px; /* Add space between list items */
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: normal; /* Set initial font weight */ 
-    transition: font-weight 0.3s; 
-    font-size: 25px;
-}
-
-/* Animated Hover Effect */
-footer a:hover {
-    animation: linkHover 0.5s ease-in-out forwards;
-    color: #00ff96;
-    text-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
-    font-width: bold;
-}
 
 @keyframes linkHover {
     0% {
@@ -311,11 +150,6 @@ footer a:hover {
     }
 }
 
-footer p {
-    animation: neon 1.5s ease-in-out infinite alternate;
-}
-
-
 
 
 
@@ -328,107 +162,6 @@ footer p {
 
 @media(max-width: 710px){
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Encode Sans Condensed', sans-serif;
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0 auto;
-}
-
-/* Header styles */
-.header {
-    height: 250px; /* Adjusted height for better mobile view */
-    width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(https://i.postimg.cc/vBwWdFKr/Banner-yi.jpg);
-    background-position: center;
-    position: relative;
-}
-
-nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav img {
-    width: 100px; /* Adjusted logo size for better mobile view */
-}
-
-.nav-links {
-    flex: 1;
-    text-align: right;
-}
-
-.nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-
-.nav-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-
-.nav-links ul li::after {
-    content: "";
-    width: 0%;
-    height: 2px;
-    background: #00ff03;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-.nav-links ul li:hover::after {
-    width: 100%;
-}
-
-.text-box {
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-
-.text-box h1 {
-    font-size: 24px; /* Adjusted font size for better mobile view */
-    padding-bottom: 20px; /* Adjusted padding for better mobile view */
-}
-
-.text-box p {
-    margin: 10px 0 20px; /* Adjusted margin for better mobile view */
-    font-size: 12px; /* Adjusted font size for better mobile view */
-}
-
-.hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 8px 20px; /* Adjusted padding for better mobile view */
-    font-size: 12px; /* Adjusted font size for better mobile view */
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-}
-
-.hero-btn:hover {
-    border: 1px solid #00ffff;
-    background: #00ffff;
-    color: black;
-    transition: 1s;
-}
 
 /* Warning message styles */
 .warning-message {
@@ -515,52 +248,7 @@ nav img {
     transform: rotate(180deg); /* Rotate the icon on hover */
 }
 
-/* Footer styles */
-footer {
-    background-color: #001427;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
 
-.left, .right {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.left {
-    margin-right: 20px; /* Adjusted margin-right for better mobile view */
-    margin-bottom: 20px; /* Move image downwards */
-}
-
-.right {
-    padding-left: 20px; /* Adjusted padding-left for better mobile view */
-    border-left: 2px solid #00ffc0; /* Blue line between image and links */
-}
-
-footer img {
-    max-width: 100%; /* Ensure image resizes properly on mobile */
-    height: auto;
-    display: block;
-    margin: 10px auto; /* Center image and add top and bottom margin */
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer ul li {
-    margin-bottom: 10px; /* Add space between list items */
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: normal; /* Set initial font weight */ 
-    transition: font-weight 0.3s; 
-    font-size: 16px; /* Adjusted font size for better mobile view */
-}
 
 /* Animated Hover Effect */
 footer a:hover {
@@ -595,9 +283,147 @@ footer a:hover {
 
 
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0 auto;
+   
+	font-family: "Jost", sans-serif; 
+	 line-height: 1.6;
+    background: #fff;
+}
+
+.header{
+ height: 500px;
+ width: 100%;
+ background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://i.postimg.cc/vBwWdFKr/Banner-yi.jpg);
+ background-position: center;
+ position : relative;
+font-family: "Voces", sans-serif; 
+}
+
+
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-item: center;
+}
+
+nav img{
+  max-width: 250px;
+height: auto;
+}
+
+.nav-links{
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+	font-family: "Voces", sans-serif; 
+}
+
+.nav-links ul li::after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #00ff03;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+
+.nav-links ul li:hover::after{
+  width: 100%;
+}
 
 
 
+.text-box{
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.text-box h1{
+  font-size: 40px;
+  font-family: "Raleway", sans-serif; 
+  padding-bottom: 40px;
+}
+
+.text-box p{
+  margin: 10px 0 40px;
+  font-size: 14px;
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+}
+
+
+.hero-btn{
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.hero-btn:hover{
+  border: 1px solid #00ffff;
+  background: #00ffff;
+  color: black;
+  transition: 1s;
+}
+
+
+
+
+@media (max-width: 600px) {
+	nav img{
+  max-width: 200px;
+height: auto;
+	}
+
+.header{
+ height: 400px;
+}
+	
+}
+
+
+
+
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+	.header{
+ height: 450px;
+}
+	
+}
 
 
 
@@ -660,12 +486,12 @@ footer a:hover {
     <div class="container">
         <h2 class="balance"><i class="fa-solid fa-circle-info" style="color: white;"></i>
 
-Your Account Balance : <span class="amount">00৳</span></h2>
+Your Account Balance : <span class="amount">00 ৳</span></h2>
     </div>
     </div><br><br>
     
     <div class="wr">
-        <h1> Minimum Withdraw : <b>150৳</b></h1>
+        <h1> Minimum Withdraw : <b>100 ৳</b></h1>
     </div>
  
  
@@ -693,26 +519,6 @@ Your Account Balance : <span class="amount">00৳</span></h2>
  
  
  
-    <section="fr">
-    
-    
-    <footer>
-        <div class="left">
-            <a href="https://yrinspireit.github.io">
-                <img src="https://i.postimg.cc/nVvDBPP5/Yi-logo.png">
-            </a>
-        </div>
-        <div class="right">
-            <ul>
-                <li><a href="https://yrinspireit.github.io">YI Main</a></li>
-                <li><a href="https://pay-yourinspireit.github.io/withdraw">Withdraw</a></li>
-                <li><a href="https://pay-yourinspireit.github.io/faq">FAQ</a></li>
-                <li><a href="https://pay-yourinspireit.github.io/active-account">Account Active</a></li>
-                <li><a href="https://pay-yourinspireit.github.io/running-team">Running Team</a></li>
-                <li><a href="https://yi-linkhub.github.io/Team-34">Join Team</a></li>
-            </ul>
-        </div>
-        <p>© All Rights Reserved to Your Inspire IT 2022-2024</p>
-    </footer></section>
+    <div id="footer"></div>
 </body>
 </html>
