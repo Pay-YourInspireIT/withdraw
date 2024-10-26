@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced 3D Dark Themed Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(145deg, #0a0a0a, #1b1b1b);
+            color: #fff;
+            overflow: hidden;
+        }
+        .login-container {
+            background: #222;
+            border-radius: 15px;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+            transform: rotateX(-5deg) rotateY(-5deg);
+            animation: float 6s infinite alternate ease-in-out;
+            perspective: 1000px;
+        }
+        @keyframes float {
+            0% { transform: translateY(-8px) rotateX(-5deg) rotateY(-5deg); }
+            100% { transform: translateY(8px) rotateX(5deg) rotateY(5deg); }
+        }
+        h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #76ff03;
+            text-shadow: 0 0 10px #76ff03;
+        }
+        .form-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 15px 15px 15px 45px;
+            font-size: 1em;
+            background: #333;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+        }
+        .form-group input:focus {
+            background: #444;
+        }
+        .form-group label {
+            position: absolute;
+            top: 50%;
+            left: 45px;
+            transform: translateY(-50%);
+            font-size: 0.9em;
+            color: #aaa;
+            pointer-events: none;
+            transition: all 0.3s;
+        }
+        .form-group input:focus + label,
+        .form-group input:not(:placeholder-shown) + label {
+            top: -4px;
+            left: 45px;
+            color: #76ff03;
+            font-size: 0.8em;
+        }
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            font-size: 1.2em;
+            color: #76ff03;
+        }
+        .show-hide {
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #aaa;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #1e1e1e;
+            background: linear-gradient(145deg, #76ff03, #64dd17);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0px 4px 15px rgba(118, 255, 3, 0.4);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .btn:hover {
+            background: #64dd17;
+            transform: translateY(-2px);
+        }
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #888;
+        }
+        .footer-text a {
+            color: #76ff03;
+            text-decoration: none;
+        }
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Log In</h2>
+        <div class="form-group">
+            <span class="icon"><i class="fas fa-user"></i></span>
+            <input type="text" required placeholder=" " id="username">
+            <label for="username">Username</label>
+        </div>
+        <div class="form-group">
+            <span class="icon"><i class="fas fa-lock"></i></span>
+            <input type="password" required placeholder=" " id="password">
+            <label for="password">Password</label>
+            <span class="show-hide" onclick="togglePassword()"><i class="fas fa-eye"></i></span>
+        </div>
+        <button class="btn" onclick="login()">Login</button>
+        <div class="footer-text">
+            Don’t have an account? <a href="#">Sign up!</a>
+        </div>
+    </div>
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById("password");
+            const type = passwordInput.type === "password" ? "text" : "password";
+            passwordInput.type = type;
+        }
+
+        async function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const response = await fetch("https://script.google.com/macros/s/AKfycbwprkkcoQScLLwoEOxVO9cSU8YIkgNj2xzGFH3BPiYm2DsA6pXDV-IPyeXUAU_w223k/exec", { // Replace with your Web App URL
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ username, password })
+            });
+            const result = await response.json();
+            if (result.success) {
+                window.location.href = 'https://www.google.com'; // Redirect on success
+            } else {
+                alert("ইউজারনেম বা পাসওয়ার্ড ভুল হয়েছে"); // Incorrect username or password message
+            }
+        }
+    </script>
+</body>
+</html>
+
