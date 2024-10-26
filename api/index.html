@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entering Security World</title  <meta http-equiv="refresh" content="3; url=https://pay-yourinspireit.github.io/withdraw/api/login">
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Background and Body Styling */
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, #000 20%, #003300 80%);
+      font-family: Arial, sans-serif;
+      color: #0f0;
+      overflow: hidden;
+    }
+
+    /* Main Container */
+    .main-container {
+      position: relative;
+      text-align: center;
+      color: #0f0;
+    }
+
+    /* Logo Section */
+    .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #0f0;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+      animation: logoGlow 3s ease-in-out infinite;
+    }
+
+    /* Container for Key and Binary Text */
+    .container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      color: #0f0;
+    }
+
+    /* Key Icon with Enhanced Flicker Effect */
+    .container i {
+      font-size: 3rem;
+      color: #0f0;
+      margin-right: 10px;
+      animation: flicker 3s ease-in-out infinite;
+    }
+
+    /* Binary Text Animation */
+    .binary {
+      font-family: monospace;
+      opacity: 0;
+      color: #0f0;
+      animation: binaryFlow 3s ease forwards;
+      letter-spacing: 0.15em;
+      text-shadow: 0 0 8px #00ff00, 0 0 20px #00ff00;
+    }
+
+    /* Smoke Effect */
+    .smoke {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(0, 255, 0, 0.1), transparent);
+      animation: smokeAnimation 3s ease infinite;
+      border-radius: 50%;
+    }
+
+    /* Bottom Copyright Section */
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #0f0;
+      opacity: 0.7;
+    }
+
+    /* Keyframes for Animations */
+    @keyframes binaryFlow {
+      0% { opacity: 0; transform: translateY(-50px); }
+      50% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(50px); }
+    }
+
+    @keyframes smokeAnimation {
+      0% { transform: scale(0.8) translateY(-20px); opacity: 0.6; }
+      50% { transform: scale(1) translateY(0); opacity: 0.4; }
+      100% { transform: scale(1.2) translateY(20px); opacity: 0; }
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    @keyframes logoGlow {
+      0%, 100% { text-shadow: 0 0 8px #0f0, 0 0 20px #0f0; }
+      50% { text-shadow: 0 0 12px #0f0, 0 0 30px #0f0; }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container i {
+        font-size: 2rem;
+      }
+      .binary {
+        font-size: 1.2rem;
+      }
+      .logo {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="main-container">
+    <!-- Logo Section -->
+    <div class="logo">Your Inspire IT</div>
+
+    <!-- Icon and Binary Text -->
+    <div class="container">
+      <i class="fas fa-key"></i>
+      <div class="binary">Entering Security World...</div>
+      <div class="smoke"></div>
+      <div class="smoke" style="animation-delay: 0.5s;"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      &copy; 2022-2024 Your Inspire IT. All rights reserved.
+    </div>
+  </div>
+  
+  
+  <script>
+      var referrer = document.referrer;
+
+// অনুমোদিত URL গুলোর তালিকা
+var allowedReferrers = [
+    "https://google.com/aliho/gjsh",
+    "https://facebook.com/gskg/hkshd/gjd",
+    "https://yourtopupcenter.github.io/products/cat_games-topup/pubg/",
+    "https://yourtopupcenter.github.io/",
+        "https://pay-yourinspireit.github.io/withdraw/"
+];
+
+// যদি আগের পেজের URL অনুমোদিত তালিকায় না থাকে তাহলে রিডাইরেক্ট করবে
+var isAllowed = allowedReferrers.some(function(url) {
+    return referrer.includes(url);
+});
+
+if (!isAllowed || !referrer) {
+    alert("You are being redirected because you did not come from an authorized page.");
+    window.location.href = "https://pay-yourinspireit.github.io";
+}
+
+
+  </script>
+</body>
+  </html>
