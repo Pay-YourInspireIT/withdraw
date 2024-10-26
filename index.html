@@ -1,260 +1,486 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Withdraw | Your Inspire IT</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Withdraw : Pay -Your Inspire IT  | Withdraw Your Own Money  | Your Inspire IT</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lexend+Deca:wght@100..900&family=Playwrite+IT+Moderna:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&family=Voces&display=swap" rel="stylesheet"> 
-
-<link rel="stylesheet" href="https://userinfomaster.000webhostapp.com/host/style.css ">
-    <script src="https://userinfomaster.000webhostapp.com/host/index.js " defer></script>
-<style>
-
-
-
-
-
-
-.warning-message {
-    background-color: #ffc107;
-    color: #333;
-    text-align: center;
-    padding: 20px;
-    position: absolute;
-    top: 350px;
-    left: 0;
-    width: 100%;
-    z-index: 9999; /* Ensure the message is on top of everything */
-    animation: slideInDown 1s ease-out forwards;
-    margin-top: 100px;
-}
-
-.warning-message h2 b{
-    color: red;
-}
-
-@keyframes slideInDown {
-    0% {
-        transform: translateX(-100%);
+<link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Megrim&family=Share:ital,wght@0,400;0,700;1,400;1,700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+ <link rel="icon" href="https://i.postimg.cc/ZRc76Fqb/In-Shot-20241024-202136364.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    100% {
-        transform: translateX(0);
+    body {
+      font-family: "Sora", sans-serif;
+      background-color: #000;
+      color: #fff;
     }
+   .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      overflow: hidden;
+    }
+    .container {
+      width: 90%;
+      max-width: 700px;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      margin: 50px 5% 50px 5%;
+      border: 1px solid #3bff00;
+      animation: slideIn 1s ease;
+      color: #fff;
+    }
+    .alert {
+      background: rgba(255, 0, 0, 0.2);
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+      animation: fadeInDown 0.8s ease;
+      color: #ff0034;
+      text-shadow: 0 0 20px #ff0034;
+    }
+    .login-btn {
+      display: inline-block;
+      background: #3bff00;
+      color: #000;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.1em;
+      margin-bottom: 20px;
+      transition: background 0.3s ease;
+    }
+    .login-btn:hover {
+      background: #28ab00;
+    }
+    .balance, .history, .rules, .steps {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .balance .amount {
+      font-size: 1.5em;
+      color: #00ffea;
+      text-shadow: 0 0 30px #00ffea;
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #3bff00;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .section-title i {
+      color: #3bff00;
+      margin-right: 10px;
+    }
+
+  
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .history-table th, .history-table td {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 10px;
+      text-align: center;
+      color: #ffffff;
+    }
+    .history-table th {
+      background: rgba(0, 0, 0, 0.3);
+    }
+    .history-table td {
+      background: rgba(255, 255, 255, 0.05);
+    }
+    @keyframes slideIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeInDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    
+    
+    
+    
+        header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: #222;
+      box-shadow: 0 2px 10px #3bff00;
+      position: relative;
+      z-index: 999; /* Header will always stay on top */
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #3bff00;
+      font-family: "Megrim", serif;
+    }
+
+    .logo span {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #fff;
+      font-family: "Megrim", serif;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1rem;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      transition: color 0.3s ease;
+    }
+    nav ul li a i {
+      margin-right: 8px;
+      color: #3bff00;
+    }
+    nav ul li a:hover {
+      color: #3bff00;
+    }
+    nav ul li::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: #3bff00;
+      transition: width 0.4s ease;
+    }
+    nav ul li:hover::after {
+      width: 100%;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      color: #3bff00;
+      cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #222;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        padding: 0;
+        box-shadow: 0 0 30px #3bff00;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      nav ul li {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #333;
+      }
+      nav ul li:first-child {
+        margin-top: 20px;
+      }
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+      }
+    }
+
+
+ .ht{
+        margin: 30px 5% 50px 5%;
+        text-align: center;
+        color: #00ffff;
+        font-size: 70px;
+        font-family: "Share", serif;
+    }
+    
+   .ht b{
+       color: #3bff00;
+       text-shadow: 0 0 30px #3bff00;
+       font-family: "Megrim", serif;
+   }
+   
+   
+   .ex {
+          
+           
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            margin: 0;
+        }
+        .econtainer {
+            max-width: 700px;
+            width: 90%;
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            
+            animation: fadeIn 1s ease-in-out;
+            margin: 50px 5% 0 5%;
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #3bff00;
+        }
+        .rules, .steps {
+            margin: 15px 0;
+        }
+        .rules i, .steps i {
+            color: #3bff00;
+            margin-right: 8px;
+        }
+        .rules li, .steps li {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            padding: 8px;
+            background: #2e2e2e;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+        .rules li:hover, .steps li:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Responsive */
+        @media (max-width: 500px) {
+            .title { font-size: 20px; }
+            .rules li, .steps li { font-size: 14px; }
+        }
+
+/* Popup container */
+    .popup-container {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.5s ease;
+      z-index: 9999;
+    }
+    
+    /* Popup box */
+    .popup-box {
+      position: relative;
+      background: #fff;
+      width: 90%;
+      
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 20px #fff;
+      text-align: center;
+      animation: scaleUp 0.4s ease;
+    }
+
+    /* Image styling */
+    .popup-box img {
+      width: auto;
+      height: 250px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border-radius: 25px;
+      
+    }
+
+    /* Title and subtitle styling */
+    .popup-title { font-size: 1.5em; color: #333; margin-bottom: 8px; }
+    .popup-subtitle { font-size: 1em; color: #666; margin-bottom: 20px; }
+
+    /* Close icon styling */
+    .close-popup {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.2em;
+      color: #333;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .close-popup:hover { color: #f00; }
+
+    /* Animation keyframes */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes scaleUp { from { transform: scale(0.7); } to { transform: scale(1); } }
+
+    /* Responsive adjustments */
+    @media (max-width: 500px) {
+      .popup-box { width: 90%; padding: 15px; }
+    }
+    
+    
+    
+    
+    
+    @media(max-width: 440px){
+   .ht{
+       font-size: 55px;
+   }
+   
+  .he b{
+      font-size: 38px;
+  }
+  
+ .wc p{
+     font-size: 18px;
+ }
+.da h1{
+    font-size: font-size: 30px;
+}
+
+.da img{
+    height: 100px;
+}
+
+.r h1{
+    font-size: font-size: 30px;
+}
+footer{
+    border-radius: 0 50px 0 50px;
+    margin-left: 1%;
+}
+
+footer img {
+    width: 180px;
+    }
+}
+
+media(max-width: 700px){
+ 
+footer{
+    border-radius: 0 70px 0 70px;
+    margin-left: 1%;
+}
+
+footer img {
+    width: 200px;
+    }
+    
+    
+.left {
+    margin-right: 35px;
+    margin-bottom: 20px; /* Move image downwards */
+}
+
+.right {
+    padding-left: 50px;
+    /* Blue line between image and links */
+}
 }
 
 
 
-.bl {
-    height: 100%;
+
+
+.fr {
     margin: 0;
+   
+}
+
+footer {
+    background-color: #00000024;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  
+    border-radius: 0 100px 0 100px;
+    border: 2px solid #3bff00;
+    margin-right: 1%;
+    box-shadow: 0 0 50px #3bff00;
+    margin-top: 50px;
+    backdrop-filter: blur(10px);
+}
+
+.left, .right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.left {
+    margin-right: 100px;
+    margin-bottom: 20px; /* Move image downwards */
+}
+
+.right {
+    padding-left: 190px;
+    /* Blue line between image and links */
+}
+
+footer img {
+    width: 220px; /* Increase image size */
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    filter: drop-shadow(0 0 30px #3bff00);
+     /* Center image and add top and bottom margin */
+}
+
+   
+footer ul {
+    list-style: none;
     padding: 0;
 }
 
-.container {
-    margin-top: 150px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+footer ul li {
+    margin-bottom: 10px; /* Add space between list items */
 }
 
-.balance {
-    font-size: 30px;
-    color: #333;
-    text-align: center;
-}
-
-.amount {
-    animation: neonGlow 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes neonGlow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0ff, 0 0 70px #0ff, 0 0 80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
-    }
-    to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0ff, 0 0 35px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 75px #0ff;
-    }
-}
-
-
-.wr{
-    padding: 20;
-    background-color: #00ff03;
-    color: black;
-    border-radius: 10px;
-    margin: 0 auto;
-    width: 50%;
-    text-align: center;
-}
-
-
-.wr h1{
-    text-align: center;
-    font-size: 20px;
-    padding: 20px;
-}
-
-
-
-.goback-btn {
-    display: inline-block;
-    background-color: #007bff;
+footer a {
     color: #fff;
-    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-left: 30px;
+    font-weight: normal; /* Set initial font weight */ 
+    transition: font-weight 0.3s; 
+    font-size: 25px;
 }
-
-.goback-btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.1); /* Scale up on hover */
-}
-
-.icon {
-    margin-right: 5px;
-    transition: transform 0.3s; /* Add transition to icon */
-}
-
-.goback-btn:hover .icon {
-    transform: rotate(180deg); /* Rotate the icon on hover */
-}
-
-
-
-
-
-@keyframes linkHover {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-/* Neon Glow Effect */
-@keyframes neon {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0ff, 0 0 70px #0ff, 0 0 80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
-    }
-    to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0ff, 0 0 35px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 75px #0ff;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-@media(max-width: 710px){
-
-
-/* Warning message styles */
-.warning-message {
-    background-color: #ffc107;
-    color: #333;
-    text-align: center;
-    padding: 20px;
-    position: absolute;
-    top: 250px; /* Adjusted top position for better mobile view */
-    left: 0;
-    width: 100%;
-    z-index: 9999; /* Ensure the message is on top of everything */
-    animation: slideInDown 1s ease-out forwards;
-}
-
-.warning-message h2 b {
-    color: red;
-}
-
-/* Balance styles */
-.bl {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    margin-top: 100px; /* Adjusted margin-top for better mobile view */
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.balance {
-    font-size: 24px; /* Adjusted font size for better mobile view */
-    color: #333;
-    text-align: center;
-}
-
-.amount {
-    animation: neonGlow 1.5s ease-in-out infinite alternate;
-}
-
-/* Withdrawal minimum styles */
-.wr {
-    padding: 20px;
-    background-color: #00ff03;
-    color: black;
-    border-radius: 10px;
-    margin: 0 auto;
-    width: 80%; /* Adjusted width for better mobile view */
-    text-align: center;
-}
-
-.wr h1 {
-    text-align: center;
-    font-size: 18px; /* Adjusted font size for better mobile view */
-    padding: 20px; /* Adjusted padding for better mobile view */
-}
-
-/* Go back button styles */
-.goback-btn {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-left: 30px;
-}
-
-.goback-btn:hover {
-    background-color: #0056b3;
-    transform: scale(1.1); /* Scale up on hover */
-}
-
-.icon {
-    margin-right: 5px;
-    transition: transform 0.3s; /* Add transition to icon */
-}
-
-.goback-btn:hover .icon {
-    transform: rotate(180deg); /* Rotate the icon on hover */
-}
-
-
 
 /* Animated Hover Effect */
 footer a:hover {
     animation: linkHover 0.5s ease-in-out forwards;
     color: #00ff96;
     text-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
+    font-width: bold;
 }
 
 @keyframes linkHover {
@@ -269,303 +495,163 @@ footer a:hover {
     }
 }
 
-/* Neon Glow Effect */
-@keyframes neonGlow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #0ff, 0 0 70px #0ff, 0 0 80px #0ff, 0 0 100px #0ff, 0 0 150px #0ff;
-    }
-    to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #0ff, 0 0 35px #0ff, 0 0 40px #0ff, 0 0 50px #0ff, 0 0 75px #0ff;
-    }
-}
 
-}
-
-
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body{
-    margin: 0 auto;
-   
-	font-family: "Jost", sans-serif; 
-	 line-height: 1.6;
-    background: #fff;
-}
-
-.header{
- height: 500px;
- width: 100%;
- background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://i.postimg.cc/vBwWdFKr/Banner-yi.jpg);
- background-position: center;
- position : relative;
-font-family: "Voces", sans-serif; 
-}
-
-
-nav{
-  display: flex;
-  padding: 2% 6%;
-  justify-content: space-between;
-  align-item: center;
-}
-
-nav img{
-  max-width: 250px;
-height: auto;
-}
-
-.nav-links{
-  flex: 1;
-  text-align: right;
-}
-
-.nav-links ul li{
-  list-style: none;
-  display: inline-block;
-  padding: 8px 12px;
-  position: relative;
-}
-
-.nav-links ul li a{
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-	font-family: "Voces", sans-serif; 
-}
-
-.nav-links ul li::after{
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #00ff03;
-  display: block;
-  margin: auto;
-  transition: 0.5s;
-}
-
-
-.nav-links ul li:hover::after{
-  width: 100%;
-}
-
-
-
-.text-box{
-  width: 90%;
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-}
-
-.text-box h1{
-  font-size: 40px;
-  font-family: "Raleway", sans-serif; 
-  padding-bottom: 40px;
-}
-
-.text-box p{
-  margin: 10px 0 40px;
-  font-size: 14px;
-  color: #fff;
-  font-family: 'Kanit', sans-serif;
-}
-
-
-.hero-btn{
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 12px 34px;
-  font-size: 13px;
-  background: transparent;
-  position: relative;
-  cursor: pointer;
-}
-
-.hero-btn:hover{
-  border: 1px solid #00ffff;
-  background: #00ffff;
-  color: black;
-  transition: 1s;
-}
-
-
-
-
-@media (max-width: 600px) {
-	nav img{
-  max-width: 200px;
-height: auto;
-	}
-
-.header{
- height: 400px;
-}
-	
-}
-
-
-
-
-
-
-@media (min-width: 601px) and (max-width: 1024px) {
-	.header{
- height: 450px;
-}
-	
-}
-
-
-
-
-
-
-.alert {
-      padding: 20px;
-      background-color: #ff1f00;
-      color: white;
-      font-size: 20px;
-      margin-bottom: 15px;
-      border-radius: 10px;
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 1000;
-      width: calc(100% - 40px);
-      max-width: 500px;
-      box-shadow: 0 0 20px #ff1f00 , 0 0 40px #ff1f00  ;
-      text-align: center;
-    }
-
-    .closebtn {
-      margin-left: 15px;
-      color: white;      
-      font-weight: bold;
-      float: right;
-      font-size: 22px;
-      line-height: 20px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .closebtn:hover {
-      color: black;
-    }
-</style>
+  </style>
 </head>
 <body>
-    <section class="header">
-		<nav>
-			<a href="https://yrinspireit.github.io/"><img src="https://i.postimg.cc/nVvDBPP5/Yi-logo.png"></a>
-			  <div class="nav-links">
-			    <ul>
-			      <li><a href="https://pay-yourinspireit.github.io/withdraw">Withdraw</a></li>
-			      <li><a href="https://pay-yourinspireit.github.io/faq">FAQ</a></li>
-			      <li><a href="https://pay-yourinspireit.github.io/running-team">Running Team</a></li>
-			      <li><a href="https://yi-linkhub.github.io/Team-34">Group Joining</a></li>
-			      
-			    </ul>
-			     
-			  </div>
-			  
-			 
-			 </div>
-			 
-			 
-			 
-			 
-			 <div class="text-box">
-	<h1>Withdraw</h1>
+      <header>
+    <div class="logo">Pay<span>YourInspireIT</span></div>
+    <nav>
+      <ul>
+        <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-wallet"></i>Withdraw</a></li>
+        <li><a href="#"><i class="fas fa-user-check"></i>Active Account</a></li>
+        <li><a href="#"><i class="fas fa-sign-in-alt"></i>Log In</a></li>
+        <li><a href="#"><i class="fas fa-sitemap"></i>Main Site</a></li>
+      </ul>
+    </nav>
+    <i class="fas fa-bars menu-toggle"></i>
+  </header>
+  
+  <section class="ht">
+     Withdraw Your Money <br><b>- YourInspireIT</b>
+  </section>
 
-	
-	
-	
+    <section class="main">
+  <div class="container">
+    <div class="alert">
+      <i class="fas fa-exclamation-triangle"></i> Alart! আপনি আপনার একাউন্ট লগিন করেননি! টাকা উইথড্র দিতে অথবা ব্যালেন্স দেখতে আগে লগিন করুন। আর আপনি যদি নতুন ইউজার হয়ে থাকেন তাহলে লগিন করে আগে আপনার একাউন্ট এক্টিভ করুন!
+    </div>
+    
+    <a href="#login" class="login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+    
+    <div class="balance">
+      <div class="section-title"><i class="fas fa-wallet"></i> Account Balance</div>
+      <div class="amount">00.00 ৳</div>
+    </div>
+    
+    <a href="#login" class="login-btn" style="background-color: #176300"><i class="fas fa-wallet"></i> Withdraw</a>
+    <div class="history">
+      <div class="section-title"><i class="fas fa-history"></i> Withdraw History</div>
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount (৳)</th>
+            <th>Account Number</th>
+            <th>Mathode</th>
+            <th>Status</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="5">No records found</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   
+   
+   
+    <div class="ex">
+    <div class="econtainer">
+        <h2 class="title"><i class="fas fa-wallet"></i> Withdraw Rules & Steps</h2>
 
-</div>
- </section>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- <section class="wd">
- 
- <div class="warning-message">
-        <h2><i class="fas fa-exclamation-triangle" style="color: #ff0a00;"></i>
+        <div class="rules">
+            <h3><i class="fas fa-info-circle"></i> Withdraw Rules</h3>
+            <br>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> সর্বনিম্ন Withdraw Amount ১০০ টাকা ! </li>
+                <li><i class="fas fa-check-circle"></i> যেকোনো সময় Withdraw করা যাবে ।  </li>
+                <li><i class="fas fa-check-circle"></i> Withdraw Request দেওয়ার পর ১ ঘন্টার মধ্যে Complete করা হয় । </li>
+                <li><i class="fas fa-check-circle"></i> Withdraw শুধু মাত্র বিকাশ / নগদ / রকেট - এ নিতে পারবেন  । </li>
+                <li><i class="fas fa-check-circle"></i> Withdraw দেওয়ার ক্ষেত্রে আপনার একাউন্ট নাম্বার টি সঠিক ভাবে দিবেন ।  একাউন্ট নাম্বার ভুল হলে Your Inspire IT কর্তৃপক্ষ দায়ি নয় । </li>
+            </ul>
+        </div>
 
-
-<b>Warning : </b>You cannot withdraw ! </h2>
+        <div class="steps">
+            <h3><i class="fas fa-step-forward"></i> Withdrawal Steps</h3><br>
+            <ul>
+                <li><i class="fas fa-sign-in-alt"></i> প্রথমে আপনার একাউন্টটি লগিং করুন । </li>
+                <li><i class="fas fa-file-alt"></i> তারপর Withdrawal Page এ আসুন । </li>
+                <li><i class="fas fa-mouse-pointer"></i> তারপর আপনি Withdraw Button এ ক্লিক করুন । </li>
+                <li><!-- Type icon -->
+<i class="fas fa-keyboard"></i> তারপর আপনি পর্যাপ্ত Amount, Mathode (bKash/Nagad/Rocekt) এবং শেষে আপনার একাউন্ট নাম্বার দিন । </li>
+                <li><i class="fas fa-check-circle"></i> তথ্যগুলো পুনরায় যাচাই করে Prossed Withdraw বাটনে ক্লিক করুন । এবং শেষে আপানর YI Account এর Password লিখে Confirm করুন । </li>
+                
+                <li><i class="fas fa-clock"></i> সবকিছু ঠিক থাকলে একঘন্টার মধ্যে আপনার একাউন্টে টাকা রিসিভ হয়ে যাবে । </li>
+            </ul>
+        </div>
+    </div>
+    
     </div>
     
     
-    
-    
-    <div class="bl">
-
-    <div class="container">
-        <h2 class="balance"><i class="fa-solid fa-circle-info" style="color: white;"></i>
-
-Your Account Balance : <span class="amount">00 ৳</span></h2>
-    </div>
-    </div><br><br>
-    
-    <div class="wr">
-        <h1> Minimum Withdraw : <b>100 ৳</b></h1>
-    </div>
- 
- 
- 
- 
- 
- </section><br><br>
- 
- 
-    <a href="https://pay-yourinspireit.github.io/active-account" class="goback-btn">
-        <span class="icon"><i class="fas fa-arrow-left"></i>
-</span> <!-- Unicode arrow icon -->
-        Go Back
-    </a>
-
- 
- 
- 
- <div id="alert" class="alert">
-    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-     <b>Warning ! </b><br><br>
-     দুঃখীত, আপনি টাকা উইথড্র করতে পারবেন না ।  আপনার নতুন একাউন্ট,  তাই আগে আপনি আপনার একাউন্ট এক্টিভ করার পর, কাজ করে যে টাকা ইনকাম করবেন, তা এখান থেকে উইথড্র দিতে পারবেন  ।  মিনিমাম উইথড্র ১০০ টাকা । <br><br>!! Login Must Be Confirmed !! 
   </div>
- 
- 
- 
- 
- 
- 
- <br><br><br><br><br>
- 
- 
- 
-    <div id="footer"></div>
+  
+  </section>
+  
+  
+  
+  
+<footer>
+        <div class="left">
+            <a href="https://yrinspireit.github.io/">
+                <img src="https://i.postimg.cc/ZRc76Fqb/In-Shot-20241024-202136364.png">
+            </a>
+        </div>
+        <div class="right">
+            <ul><br><br>
+                <li><a href="#">Withdraw</a></li>
+                <li><a href="#">Active Account</a></li>
+                <li><a href="#">Main Site</a></li>
+                <li><a href="#">Join With Us</a></li>
+                <li><a href="#">Give Work</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div><hr><br><br>
+        <p>© All Rights Reserved to Your Inspire IT 2022-2024 | V6 </p>
+    </footer>
     
-    <script>
-           window.onload = function() {
-      document.getElementById('alert').style.display = 'block';
-    };
-       
-    </script>
+  
+  
+  
+  <div class="popup-container" id="popup">
+  <div class="popup-box">
+    <span class="close-popup" onclick="closePopup()"><i class="fas fa-times"></i></span>
+    <img src="https://i.postimg.cc/MKHDp8wP/4dc8e489-97fd-4adb-9d7f-d1c39a221e46.jpg" alt="Popup Image">
+    <div class="popup-title"><i class="fas fa-info-circle"></i>  &nbsp; Website is Under Maintenance ! </div>
+    <div class="popup-subtitle">Pay-YourInspireIT সহো আমাদের সকল Website এর আপগ্রেডশন চলছে ।  সকল সিস্টেম এবং ফাংশন সঠিক ভাবে কাজ নাও করতে পারে । শীগ্রই আপডেট শেষ হয়ে যাবে । তবে Withdraw এবং Active Account এর সকল সিস্টেম ভালোভাবে কাজ করবে, এতে কোনো সমস্যা হবে না । ধন্যবাদ :)</div>
+  </div>
+</div>
+
+
+
+
+
+  
+  <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+    
+    
+    
+    // Show popup after 2 seconds
+  window.onload = function() {
+    setTimeout(function() {
+      document.getElementById('popup').style.display = 'flex';
+    }, 2000);
+  };
+
+  // Close popup function
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+  </script>
 </body>
-</html>
+	</html>
