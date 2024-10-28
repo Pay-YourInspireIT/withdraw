@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Activation Warning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background: #0d0d0d;
+            color: #ffffff;
+            margin: 0;
+        }
+        .container {
+            background: linear-gradient(145deg, #1c1c1c, #2a2a2a);
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 450px;
+            box-shadow: 0 0 40px #ff001f;
+            border: 2px solid #ff001f;
+            position: relative;
+            animation: fadeInUp 1s ease-out;
+        }
+        h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #ff4c4c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            animation: pulseRed 2s infinite;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ddd;
+            margin: 10px 0;
+        }
+        .icon {
+            font-size: 30px;
+            color: #ff4c4c;
+            animation: shake 1.5s infinite;
+        }
+        .highlight {
+            color: #ffeb3b;
+            font-weight: bold;
+        }
+        .translate-btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #ff4c4c;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+            width: 100%;
+            font-size: 16px;
+        }
+        .translate-btn:hover {
+            background-color: #e33535;
+        }
+        .countdown {
+            font-size: 20px;
+            color: #ffd700;
+            font-weight: bold;
+            margin-top: 20px;
+            animation: fadeIn 1s infinite;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #666;
+            animation: fadeInUp 1.5s;
+        }
+        .footer p {
+            margin: 3px 0;
+        }
+        /* Keyframe Animations */
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes pulseRed {
+            0%, 100% { color: #ff4c4c; }
+            50% { color: #ff1a1a; }
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-3px); }
+            40%, 80% { transform: translateX(3px); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-exclamation-triangle icon"></i> Hey New User, Your Account Is Not Activated!</b></h1>
+        <p><span class="highlight">Warning :</span> Your account is inactive, preventing you from withdrawing funds.</p>
+        <p>Current Balance : <span class="highlight">00.00 Taka</span>. To unlock all features and earn money, activate your account now ! </p>
+        <p>This is a security measure to protect your earnings and secure your withdrawals.</p>
+        <p class="countdown">Redirecting in <span id="countdown">15</span> seconds...</p>
+        <button class="translate-btn" onclick="translateToBangla()">বাংলায় দেখুন</button>
+        
+        <a href="#"><button class="translate-btn" style="background: #26ff00; color: #000;">Active Account</button></a>
+        <div class="footer">
+            <p><strong>Your Inspire IT</strong></p>
+            <p>&copy; 2022-2024 Your Inspire IT. All rights reserved.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Countdown Timer
+        let countdownNum = 15;
+        const countdownElement = document.getElementById("countdown");
+
+        const countdownInterval = setInterval(() => {
+            countdownNum--;
+            countdownElement.textContent = countdownNum;
+            if (countdownNum <= 0) {
+                clearInterval(countdownInterval);
+                window.location.href = "activate_account.html";
+            }
+        }, 1000);
+
+        // Translation Function
+        function translateToBangla() {
+            document.querySelector("h1").innerHTML = "<i class='fas fa-exclamation-triangle icon'></i> হ্যালো নতুন ইউজার ! আপনার একাউন্টটি এক্টিভ করা নয় ! ";
+            document.querySelectorAll("p")[0].innerHTML = "<span class='highlight'>ওয়ার্নিং :</span> আপনার একাউন্টটি এক্টিভ করা নয়, যা আপনাকে টাকা উইথড্র করতে এবং টাকা ইনকাম করতে বাধা দেয় ।";
+            document.querySelectorAll("p")[1].innerHTML = "বর্তমান ব্যালেন্স : <span class='highlight'>০০.০০ টাকা</span>। সম্পূর্ণ বৈশিষ্ট্যগুলি আনলক করতে , এখনই আপনার একাউন্টন এক্টিভ  করুন!";
+            document.querySelectorAll("p")[2].textContent = "আপনার ইনকামের সুরক্ষা এবং উইথড্রর নিরাপত্তার জন্য এটি একটি নিরাপত্তা ব্যবস্থা ।";
+            document.querySelector(".countdown").textContent = "১৫ সেকেন্ডের মধ্যে আপনাকে এক্টিভ একাউন্ট পেজে নিয়ে যাওয়া হচ্ছে...";
+        }
+    </script>
+</body>
+</html>
