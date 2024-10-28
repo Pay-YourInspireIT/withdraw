@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+    }
+    .redirect-container {
+      text-align: center;
+    }
+    .message {
+      font-size: 1.5rem;
+      color: #333;
+    }
+    .countdown {
+      font-size: 2rem;
+      color: #0073e6;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="redirect-container">
+    <p class="message">You will be redirected in <span class="countdown" id="countdown">3</span> seconds...</p>
+  </div>
+
+  <script>
+    let countdown = 3;
+    const countdownElement = document.getElementById('countdown');
+
+    const interval = setInterval(() => {
+      countdown--;
+      countdownElement.textContent = countdown;
+
+      if (countdown <= 0) {
+        clearInterval(interval);
+        window.location.href = "https://pay-yourinspireit.github.io/withdraw/api/next/a";
+      }
+    }, 1000);
+  </script>
+</body>
+  </html>
