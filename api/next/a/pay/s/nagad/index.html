@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nagad - Active Account | Your Inspire IT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Megrim&family=Share:ital,wght@0,400;0,700;1,400;1,700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+ <link rel="icon" href="https://i.postimg.cc/ZRc76Fqb/In-Shot-20241024-202136364.png" type="image/png">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: black;
+            height: 1000px;
+          font-family: "Sora", sans-serif;
+        }
+        .hl h1{
+            color: #00ff03;
+            font-size: 40px;
+            text-align: center;
+            padding-top: 20px;
+            text-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
+            font-family: "Megrim", serif;
+        }
+        .hl img{
+            width: 200px;
+            height: 200px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        .select{
+            height: auto;
+            width: auto;
+            background: #3bff006d;
+            margin: 0 auto;
+            padding: 10px;
+            color: white;
+            border-left: 4px solid #3bff00;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 50px;
+        }
+        .st {
+            width: auto;
+            height: auto;
+            padding: 10px;
+            margin-top: 50px;
+            text-align: center; /* Center align the content */
+        }
+        .act {
+            height: 150px;
+            width: 200px;
+            padding: 10px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 20px;
+            display: inline-block; /* Add this to make the container size fit the content */
+            box-shadow: 0 0 20px rgba(173, 216, 230, 0.5), 0 0 40px rgba(173, 216, 230, 0.5);
+        }
+        #iconn {
+            font-size: 50px; /* Increase the font size */
+            color: #FFD43B; /* Change the color */
+            margin-bottom: 20px;
+            padding-top: 20px;
+            font-family: "Voces", sans-serif;
+        }
+        .act h2{
+            font-size: 30px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .act:hover{
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
+        }
+        .wd {
+            height: 150px;
+            width: 200px;
+            padding: 10px;
+            margin: 0 auto;
+            background: #00ffff;
+            border-radius: 20px;
+            display: inline-block; /* Add this to make the container size fit the content */
+            box-shadow: 0 0 20px rgba(173, 216, 230, 0.5), 0 0 40px rgba(173, 216, 230, 0.5);
+        }
+        .wd h2{
+            font-size: 30px;
+            font-family: "Voces", sans-serif;
+        }
+        .wd:hover{
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
+        }
+        .st img{
+            height: 70px;
+            width: 100px;
+        }
+        #nagad{
+            height: 70px;
+            width: 130px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        #rocket{
+            height: 110px;
+            wodth: 130px;
+        }
+        #a{
+            box-shadow: 0 0 20px rgba(128, 0, 128, 1), 0 0 40px rgba(128, 0, 128, 1);
+        }
+        #a:hover{
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
+        }
+        #b{
+            box-shadow: 0 0 20px rgba(255, 255, 0, 0.5), 0 0 40px rgba(255, 255, 0, 0.5);
+        }
+        #b:hover{
+            box-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 1);
+            transition: 1.5s
+        }
+        #c{
+            box-shadow: 0 0 20px rgba(255, 192, 203, 1), 0 0 40px rgba(255, 192, 203, 1);
+        }
+        #c:hover{
+            box-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 1);
+            transition: 1.5s
+        }
+        .cn{
+            padding-top: 30px;
+            width: 40%;
+            margin: 0 auto;
+        }
+        .cn h3{
+            color: white;
+            text-align : center;
+            background: #00ffab7a;
+            width: auto;
+            border-bottom: 4px solid #3bff00;
+            padding: 10px;
+            font-family: "Voces", sans-serif;
+        }
+        .bt{
+            margin-left: 20px;
+            margin-top: 10px;
+            padding: 10px 20px 10px 20px;
+            background-color: #00ff03;
+            border: 1px solid #00ff03;
+            border-radius: 5px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 1);
+            transition: 1.5s
+            font-family: "Voces", sans-serif;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #00ffff;
+            border: 2px solid #00ffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 40px rgba(0, 255, 0, 1); /* Pink box shadow */
+            z-index: 1;
+            font-family: "Voces", sans-serif;
+        }
+        .popup span {
+            color: #002dff;
+            padding: 7px;
+            font-size: 20px;
+        }
+        .popup span b{
+            color: black;
+            font-size: 15px;
+        }
+        .popup.show {
+            display: block;
+        }
+        
+        
+        
+        
+        
+        
+              .popup2 {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #ff0a00;
+            border: 2px solid #ff0a00;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 20px #ff000a, 0 0 40px #ff0a00; /* Pink box shadow */
+            z-index: 1;
+            font-family: "Voces", sans-serif;
+            
+        }
+        .popup2 span {
+            color: black;
+            padding: 7px;
+            font-size: 17px;
+        }
+        .popup2 span b{
+            color: black;
+            font-size: 15px;
+        }
+        .popup2.show {
+            display: block;
+        }  
+        
+        
+        
+        
+        
+        
+        
+        
+        .very{
+            margin: 0 auto;
+            width: 50%;
+        }
+        .very form{
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        .very form input{
+            height: 17px;
+            width: 100%;
+            border-radius: 20px;
+            padding: 8px;
+            font-size: 19px;
+            font-family: "Voces", sans-serif;
+        }
+        .very p{
+            color: #95f5ff;
+            font-size: 19px;
+            padding: 7px;
+            font-family: "Voces", sans-serif;
+        }
+        .very form input[type="text"]:focus,
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #00bcd4;
+            box-shadow: 0 0 10px #00ff03; /* ফোকাসে নিয়ন ইফেক্ট */
+        }
+        p{
+            color: #fff;
+            font-family: "Voces", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="hl">
+        <img src="https://i.postimg.cc/ZRc76Fqb/In-Shot-20241024-202136364.png">
+        <h1>Pay - Your Inspire IT</h1>
+    </div>
+    <div class="select">
+        <h1>Copy Number, Send Money and then Verify -</h1>
+    </div>
+    <div class="st">
+        <a href="#"><div class="act" id="c" style="display: none;">
+            <img src="https://i.postimg.cc/xdVnfxt1/b-Kash-Logo.png" id="iconn">
+            <h2>bKash</h2>
+        </div></a><br><br><br><br>
+        <a href="#"><div class="act" id="b">
+            <img src="https://i.postimg.cc/mgCW53Bf/nagad-seeklogo.png" id="nagad">
+            <h2>Nagad</h2>
+        </div></a>
+        <a href="#"><div class="act" id="a" style="display: none;">
+            <img src="https://i.postimg.cc/pT802CcR/Rocket-ddbl.png" id="rocket">
+            <h2>Rocket</h2>
+        </div></a>
+    </div>
+    <div class="cn">
+        <p>bKash Personal</p>
+        <h3 id="phoneNumber">+880 1912-107604</h3>
+        <button onclick="copyPhoneNumber()" class="bt">Copy</button>
+    </div>
+    <br><br><br><br><br>
+    <section class="very">
+        <form id="paymentForm" action="#" method="post">
+            <p>Enter Sender Number</p>
+            <input type="number" id="senderNumber"><br><br>
+            <p>Enter Amount</p>
+            <input type="number" id="amount"><br><br>    
+            <p>Enter Trx ID</p>
+            <input type="text" id="trxId"><br><br>
+            <button class="bt" type="button" id="verifyButton">Verify</button>
+        </form>
+    </section>
+    <div id="paymentPopup" class="popup">
+        <span class="close" onclick="closePopup()">&times; &nbsp;
+        <b>Payment Not Received</b></span>
+    </div>
+    <div id="blockPopup" class="popup2">
+        <span class="close" onclick="closePopup()">&times; &nbsp;
+        <b>Your Payment is Blocked</b></span>
+    </div>
+    <br><br><br><br>
+    <script>
+        let verifyClickCount = 0;
+        document.getElementById('verifyButton').addEventListener('click', function() {
+            verifyClickCount++;
+            if (verifyClickCount < 5) {
+                document.getElementById('paymentPopup').classList.add('show');
+            } else {
+                document.getElementById('blockPopup').classList.add('show');
+            }
+        });
+        function closePopup() {
+            document.getElementById('paymentPopup').classList.remove('show');
+            document.getElementById('blockPopup').classList.remove('show');
+        }
+        function copyPhoneNumber() {
+            var phoneNumber = document.getElementById("phoneNumber").innerText;
+            navigator.clipboard.writeText(phoneNumber)
+                .then(function() {
+                    alert("Phone number copied to clipboard: " + phoneNumber);
+                })
+                .catch(function(error) {
+                    console.error("Unable to copy phone number: ", error);
+                });
+        }
+    </script>
+</body>
+  </html>
