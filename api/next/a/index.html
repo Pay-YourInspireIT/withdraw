@@ -3,420 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Continue to Active Account - New User | Your Inspire IT</title>
+  <title>Active Account - For New User | Pay - Your Inspire IT Wallet | Your Inspire IT</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
  <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@100..800&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Megrim&family=Share:ital,wght@0,400;0,700;1,400;1,700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
  <link rel="icon" href="https://i.postimg.cc/ZRc76Fqb/In-Shot-20241024-202136364.png" type="image/png">
- 
  <link rel="stylesheet" href="style.css">
+ 
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: "Sora", sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-      background: #222;
-      box-shadow: 0 2px 10px #3bff00;
-      position: relative;
-      z-index: 999; /* Header will always stay on top */
-    }
-    .logo {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #3bff00;
-      font-family: "Megrim", serif;
-    }
-
-    .logo span {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: #fff;
-      font-family: "Megrim", serif;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    nav ul li {
-      position: relative;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 1.1rem;
-      padding: 10px 15px;
-      display: flex;
-      align-items: center;
-      transition: color 0.3s ease;
-    }
-    nav ul li a i {
-      margin-right: 8px;
-      color: #3bff00;
-    }
-    nav ul li a:hover {
-      color: #3bff00;
-    }
-    nav ul li::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 3px;
-      background-color: #3bff00;
-      transition: width 0.4s ease;
-    }
-    nav ul li:hover::after {
-      width: 100%;
-    }
-    .menu-toggle {
-      display: none;
-      font-size: 1.8rem;
-      color: #3bff00;
-      cursor: pointer;
-    }
-    @media (max-width: 768px) {
-      nav ul {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #222;
-        flex-direction: column;
-        width: 100%;
-        display: none;
-        padding: 0;
-        box-shadow: 0 0 30px #3bff00;
-      }
-      nav ul.active {
-        display: flex;
-      }
-      nav ul li {
-        width: 100%;
-        text-align: left;
-        border-bottom: 1px solid #333;
-      }
-      nav ul li:first-child {
-        margin-top: 20px;
-      }
-      .menu-toggle {
-        display: block;
-        position: absolute;
-        right: 20px;
-      }
-    }
-    
-    
-    .fr {
-    margin: 0;
-   
-}
-
-footer {
-    background-color: #00000024;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  
-    border-radius: 0 100px 0 100px;
-    border: 2px solid #3bff00;
-    margin-right: 1%;
-    box-shadow: 0 0 50px #3bff00;
-    margin-top: 50px;
-    backdrop-filter: blur(10px);
-}
-
-.left, .right {
-    display: inline-block;
-    vertical-align: top;
-}
-
-.left {
-    margin-right: 100px;
-    margin-bottom: 20px; /* Move image downwards */
-}
-
-.right {
-    padding-left: 190px;
-    /* Blue line between image and links */
-}
-
-footer img {
-    width: 220px; /* Increase image size */
-    height: auto;
-    display: block;
-    margin: 10px auto;
-    filter: drop-shadow(0 0 30px #3bff00);
-     /* Center image and add top and bottom margin */
-}
-
-   
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer ul li {
-    margin-bottom: 10px; /* Add space between list items */
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: normal; /* Set initial font weight */ 
-    transition: font-weight 0.3s; 
-    font-size: 25px;
-}
-
-/* Animated Hover Effect */
-footer a:hover {
-    animation: linkHover 0.5s ease-in-out forwards;
-    color: #00ff96;
-    text-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 40px rgba(0, 255, 0, 0.5);
-    font-width: bold;
-}
-
-@keyframes linkHover {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-
-@media(max-width: 400px){
-    .left {
-    margin-right: 10px;
-    margin-bottom: 20px; /* Move image downwards */
-}
-
-.right {
-    padding-left: 10px;
-    /* Blue line between image and links */
-}
-}
-
-@media(max-width: 600px){
-    .left {
-    margin-right: 20px;
-    margin-bottom: 20px; /* Move image downwards */
-}
-
-.right {
-    padding-left: 20px;
-    /* Blue line between image and links */
-}
-}
-
-
-
-/* Popup container */
-    .popup-container {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-      justify-content: center;
-      align-items: center;
-      animation: fadeIn 0.5s ease;
-      z-index: 9999;
-    }
-    
-    /* Popup box */
-    .popup-box {
-      position: relative;
-      background: #fff;
-      width: 90%;
-      
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0px 4px 20px #fff;
-      text-align: center;
-      animation: scaleUp 0.4s ease;
-    }
-
-    /* Image styling */
-    .popup-box img {
-      width: auto;
-      height: 250px;
-      object-fit: cover;
-      margin-bottom: 15px;
-      border-radius: 25px;
-      
-    }
-
-    /* Title and subtitle styling */
-    .popup-title { font-size: 1.5em; color: #333; margin-bottom: 8px; }
-    .popup-subtitle { font-size: 1em; color: #666; margin-bottom: 20px; }
-
-    /* Close icon styling */
-    .close-popup {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 1.2em;
-      color: #333;
-      cursor: pointer;
-      transition: color 0.2s;
-    }
-    .close-popup:hover { color: #f00; }
-
-    /* Animation keyframes */
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-    @keyframes scaleUp { from { transform: scale(0.7); } to { transform: scale(1); } }
-
-    /* Responsive adjustments */
-    @media (max-width: 500px) {
-      .popup-box { width: 90%; padding: 15px; }
-    }
-    
-    
-.dai{
-    display: flex;
-    justify-content: center;
-    align-item: center;
-    gap: 20px;
-}
-
-.dai img{
-    width: auto;
-    height: 150px;
-}
-
-.da{
-    margin: 50px 5% 0 5%;
-}
-.da h1{
-    text-align: center;
-    color: #3bff00;
-    text-shadow: 0 0 30px #3bff00;
-    font-size: 45px;
-    margin-bottom: 35px;
-}
-
-.r{
-         margin: 50px 5% 0 5%;
-     }
-     
-    .r h1{
-        text-align: center;
-        color: #3bff00;
-        text-shadow : 0 0 30px #3bff00;
-        font-size: 35px;
-    }
-   .ra {
-      margin: 0;
-    
-      
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-      overflow: hidden;
-    }
-
-    .rcontainer {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      width: 90%;
-      max-width: 1200px;
-    }
-
-    .box {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 30px;
-      backdrop-filter: blur(10px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 4px 10px black;
-      transition: transform 0.3s, background-color 0.3s;
-    }
-
-    .box:hover {
-      transform: translateY(-10px);
-      background-color: rgba(255, 255, 255, 0.15);
-    }
-
-    .ricon {
-      font-size: 50px;
-      margin-bottom: 15px;
-      color: #3bff00;
-      animation: bounce 1.5s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px);
-      }
-    }
-
-    .box h3 {
-      font-size: 24px;
-      margin: 10px 0;
-    }
-
-    .box p {
-      font-size: 18px;
-      opacity: 0.8;
-    }
-
-    @media (max-width: 768px) {
-      .rcontainer {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      }
-    }
-
-
-@media(max-width: 440px){
-   .ht{
-       font-size: 55px;
-   }
-   
-  .he b{
-      font-size: 38px;
-  }
-  
- .wc p{
-     font-size: 18px;
- }
-.da h1{
-    font-size: font-size: 30px;
-}
-
-.da img{
-    height: 100px;
-}
-
-.r h1{
-    font-size: font-size: 30px;
-}
 
 
 
@@ -522,30 +119,67 @@ footer a:hover {
 
 </section>
 
+<footer>
+    <div class="footer-grid">
+        <!-- Company Information -->
+        <div class="footer-column">
+            <h3>Company</h3>
+            <p><strong><img src="https://i.postimg.cc/ZRc76Fqb/In-Shot-20241024-202136364.png" alt=""></strong></p>
+            <p><b>Your Inspire IT</b></p>
+            <p>Best Trusted Digital Partner Since 2022.</p>
+            <p>Earning Our Member, Earning Our Team, Profit to Our Client ! </p>
+        </div>
+
+        <!-- Quick Navigation Links -->
+        <div class="footer-column footer-links">
+            <h3>Quick Links</h3>
+             <a href="https://pay-yourinspireit.github.io/">Home</a>
+            <a href="https://YrInspireIT.github.io">Main Site</a>
+            <a href="https://pay-yourinspireit.github.io/withdraw">Withdraw</a>
+            <a href="https://pay-yourinspireit.github.io/active-account">Active Account</a>
+            <a href="https://pay-yourinspireit.github.io/login">Login</a>
+            <a href="https://YrInspireIT.github.io/faq">FAQ</a>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="footer-column" style="display: none;">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-envelope"></i> email@example.com</p>
+            <p><i class="fas fa-phone"></i> +123 456 7890</p>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Main St, City, Country</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-column" style="display: none;">
+            <h3>Subscribe</h3>
+            <form class="subscribe-form" onsubmit="showSubscribeMessage(event)">
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p id="subscribeMessage" style="display:none;">Thank you for subscribing!</p>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2022 - 2025 Your Inspire IT. All Rights Reserved.</p>
+        <p style="display: none;"><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
 
 
 
 
   
-  <footer>
-        <div class="left">
-            <a href="https://yrinspireit.github.io/">
-                <img src="https://i.postimg.cc/ZRc76Fqb/In-Shot-20241024-202136364.png">
-            </a>
-        </div>
-        <div class="right">
-            <ul><br><br>
-                <li><a href="https://pay-yourinspireit.github.io/withdraw/">Withdraw</a></li>
-                <li><a href="#lhttps://pay-yourinspireit.github.io/active-account">Active Account</a></li>
-                <li><a href="https://YrInspireIT.github.io">Main Site</a></li>
-                <li><a href="#">Join With Us</a></li>
-                <li><a href="#">Give Work</a></li>
-                <li><a href="#">FAQ</a></li>
-            </ul>
-        </div><hr><br><br>
-        <p>© All Rights Reserved to Your Inspire IT 2022-2024 | V6 </p>
-    </footer>
-    
+ 
     <div class="popup-container" id="popup">
   <div class="popup-box">
     <span class="close-popup" onclick="closePopup()"><i class="fas fa-times"></i></span>
@@ -556,25 +190,7 @@ footer a:hover {
 </div>
 
   
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector("nav ul");
-
-    menuToggle.addEventListener("click", () => {
-      nav.classList.toggle("active");
-    });
-     // Show popup after 2 seconds
-  window.onload = function() {
-    setTimeout(function() {
-      document.getElementById('popup').style.display = 'flex';
-    }, 2000);
-  };
-
-  // Close popup function
-  function closePopup() {
-    document.getElementById('popup').style.display = 'none';
-  }
-    
+  <script src="script.js">
       </script>
 </body>
-</html>
+  </html>
